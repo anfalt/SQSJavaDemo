@@ -1,22 +1,22 @@
 language: java
 sudo: false
 install: true
-
 addons:
   sonarcloud:
-    organization: "anfalt-github"
+    organization: anfalt-github
     token:
-      secure: "b35f5ed8b66fa4d7001a0a68b36e8468b4515983"
-
+      secure: "UdSb2thuYrK2XLeZgRD4ZZ7sPZCheCAKEBly6M+CSnU0NzE1oxDWCqNYpen2HaQehUwogC9oPLOY4DPFrLwU4Zhg1RXlA++TzLo9SoGxaWz6nGx1xp6Fn3IRq8M4kz4z34zvK3iHLRSENV0HK4Us3Kn1F3+p18aYCmhpYJID9JoqFn+KfQHnG+2cPGcr6d
+              th5OPIoJUtd0OyP4X7JbZaV8tiz2vVpMctpteYIBCf1ZlnkGSbUquOdkMlrI6Fkn5+rGnIpyeLD3A292nqFJaCjhXdg6zxi7WldY9QVLEfUt5qr+lzoHejNmuQAZ9N3XwruiF/jz1zsbI8GNPwPQoh5h9LQBNMt7RmXc+RmrpkQG3UypgAFfVYXqX/yE2dNLkaPcdI4UC
+              DuI3pq+GjFW68jvZnpW3boJ5e0UdAjyQtbKPRJeIrtqGCxFc1Xvh7tG07j3739QZlWyqLoDJ80VH9jAX7DIYqmHo//sbdBsynk0jL5FGvQwhV/k4JPJGD7x52veWGpBkHjtFVW/VeMYysl/gpGtXTMhKnohbDJNhkYiWV77SiA0Q5h1jUZQ0BK097RTVtDjImNpJmmI22
+              ROWosRVKYo+a8SmQfBF0l3GaVYfD+tcR8DqZ3s46NCpXVhE8NWSdEpkCK18eIBZ2gKTexGH9laHPirmn/VE8CpFJZIY="
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 script:
-  # JaCoCo is used to have code coverage, the agent has to be activated
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
-
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
 cache:
   directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.sonar/cache'
-
+  - "$HOME/.m2/repository"
+  - "$HOME/.sonar/cache"
+env:
+  global:
+    secure: QYQtwNWXQTyrBV6Rjcu09xQr46M3lb0WCyxVgg3xx44oJm31VBz1HcA3oBqxYTbViZDnjP/lzpcIFKGu0xQnzmLfghaHBRPmQf1ej4OhBZprsyqDn+8GxdWFwrmItrzfi7vIgKRX8PlDbUMp0wnjLi7U0Yi9EhIMsC/fWtsgZASRaFK3nqZJg1LyDiTLXRgzaHGIwcg+U1tu+nU1GyViElsUQSHyincoGbyvX+smcbK46SnIlEsR4CdAFC24sM0gihAbspm9ocdDGcNxhuIi0PSMjD9VCmDWiCd1yW9Cd9dYcyKf9y+Am2YECoYwmB9jrbh9aCssSw26VLkTJfK99AFdG0miShO0q6yp38Ol7z1BlosVSpYKV2LGqGBO9F/3mwBzUz8jW5Dqnl60qQkrWrZqQJNAZ02FVwNsXVUIAVM5H3joLSOS29yH8MFVlgCCCAsq2LJLsdybV9H5y5PR2nfaRMGRHS5fSPrHWQMrecWebACwL5KGlV/IphI0hOFWU+LbcA8YjlOqYj/231787xrtAY4aukJxoRl5pRHyoeqawVUv+B0XrXvJE0qM1ZVMtrxZlnQ6Sc2EEI1x+nC+3Kfd5+5vsSN4UQcdhX5QEARbkchwHNnB2erM7cnwnQs73PfTCWH4x++Xj6LLl8xypuaP0V5664Qjm6fM7QqaSD8=
